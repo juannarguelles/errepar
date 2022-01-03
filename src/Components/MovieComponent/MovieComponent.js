@@ -9,15 +9,15 @@ import {
 
 
 const MovieComponent = (props) => {
-  const { Title, Year, imdbID, Type, Poster } = props.movie;
+  const { 
+    Title, 
+    Year, 
+    Type, 
+    Poster 
+  } = props.movie;
 
   return (
-    <MovieContainer
-      onClick={() => {
-        props.onMovieSelect(imdbID);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }}
-    >
+    <MovieContainer>
       <CoverImage src={Poster} alt={Title} />
       <MovieName>{Title}</MovieName>
       <InfoColumn>
@@ -27,4 +27,5 @@ const MovieComponent = (props) => {
     </MovieContainer>
   );
 };
+
 export default MovieComponent;

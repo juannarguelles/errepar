@@ -60,7 +60,8 @@ const Navbar = () => {
                   <Search/>
                   <SearchInput
                     placeholder="Películas, Series..."
-                    value={searchQuery}
+                    //Creo un valor predeterminado para la entrada
+                    value={searchQuery || ''}
                     onChange={onTextChange}
                   />
                 </SearchBox>
